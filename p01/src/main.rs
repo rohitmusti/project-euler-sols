@@ -4,6 +4,11 @@
  * get 3, 5, 6 and 9. The sum of these multiples is 23.
  *
  * Find the sum of all the multiples of 3 or 5 below 1000.
+ *
+ * Pretty straight forward algorithm: loop through all numbers, check if they are divisible by 3 or
+ * 5, append if so, otherwise ignore. The minimum possible run time for solving this problem is
+ * O(n) where n is the target number and this algorithm runs in that time.
+ *
  */
 
 fn main() {
