@@ -1,7 +1,17 @@
 /*
  * Prompt:
  * The prime factors of 13195 are 5, 7, 13 and 29.
+ *
  * What is the largest prime factor of the number 600851475143 ?
+ *
+ * Solution:
+ * Loop from 1 to the square root of the target number. Divide number by the 
+ * whatever values you enounter that it evenly divides into, these will be its 
+ * prime factors. By starting at the smallest number and continuing until reach the 
+ * top, you guarantee that you will reduce the target number to its larges prime 
+ * factor. This algorithm runs in O(sqrt(N)) where n is the target. This is the 
+ * minimum possible solution as the prime factor could be its square root and 
+ * must consider up until and including its square root.
  */
 
 fn main() {

@@ -4,7 +4,12 @@
  * terms. By starting with 1 and 2, the first 10 terms will be:
     1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
  *
- * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+ * By considering the terms in the Fibonacci sequence whose values do not exceed 
+ * four million, find the sum of the even-valued terms.
+ *
+ * Solution:
+ * Generate the fibonnaci sequence up until a number and append the even numbers 
+ * to an array and sum the array. This runs in linear time O(N) if N is the target.
  */
 
 fn main() {
