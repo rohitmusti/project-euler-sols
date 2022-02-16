@@ -22,7 +22,7 @@ fn main() {
     println!("Hello, world!");
 }
 
-pub fn is_palindrome(num: u32) -> bool {
+fn is_palindrome(num: u32) -> bool {
     let num_str = num.to_string();
     let mid_point = &num_str.len() / 2;
     let half1;
@@ -36,3 +36,4 @@ pub fn is_palindrome(num: u32) -> bool {
     }
     half1 == half2.chars().rev().collect::<String>()
 }
+
