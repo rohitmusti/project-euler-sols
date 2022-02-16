@@ -17,4 +17,10 @@ pub mod tests {
         // odd num digits and false
         assert!(!is_palindrome(900));
     }
+
+    #[test]
+    fn largest_pal() {
+        use crate::largest_palindrome_from_n_factors;
+        assert_eq!(largest_palindrome_from_n_factors(2), 9009);
+    }
 }

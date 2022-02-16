@@ -19,7 +19,26 @@
 mod test;
 
 fn main() {
-    println!("Hello, world!");
+    let target_len = 3;
+    let result = largest_palindrome_from_n_factors(target_len);
+    println!("The largest palindrome with factors of length {}: {}", target_len, result);
+    
+}
+
+fn largest_palindrome_from_n_factors(n: u32) -> u32 {
+    let largest = u32::pow(10,n) - 1;
+    let smallest = u32::pow(10,n-1) + 1;
+    let mut max: u32 = 0;
+
+    for val1 in (smallest..=largest).rev() {
+        for val2 in (smallest..=largest).rev() {
+            let prod = val1 * val2;
+            if prod > max && is_palindrome(prod) {
+                max = prod;
+            }
+        }
+    }
+    max
 }
 
 fn is_palindrome(num: u32) -> bool {
