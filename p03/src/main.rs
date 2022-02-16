@@ -20,7 +20,7 @@ fn main() {
     println!("The largest prime factor of {} is: {}", target, sol);
 }
 
-pub fn largest_prime_factor(target: u64) -> u64 {
+fn largest_prime_factor(target: u64) -> u64 {
     let sol_sqrt: u64 = (target as f64).sqrt() as u64;
     let mut sol = target;
 

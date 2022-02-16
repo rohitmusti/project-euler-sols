@@ -20,7 +20,7 @@ fn main() {
     );
 }
 
-pub fn all_divis_3_5(val: u32) -> Vec<u32> {
+fn all_divis_3_5(val: u32) -> Vec<u32> {
     let mut sol: Vec<u32> = Vec::new();
     for val in 3..val {
         if val % 3 == 0 || val % 5 == 0 {

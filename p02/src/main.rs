@@ -21,7 +21,7 @@ fn main() {
     );
 }
 
-pub fn even_fib_under_lim(limit: u32) -> Vec<u32> {
+fn even_fib_under_lim(limit: u32) -> Vec<u32> {
     let mut prev: u32 = 1;
     let mut current: u32 = 2;
     let mut temp;
