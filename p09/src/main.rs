@@ -24,18 +24,11 @@ fn main() {
 
 fn pythagorean_triple_product(target_sum: u32) -> u32 {
     let mut result: u32 = 0;
-    for i in 1..(target_sum - 2) {
-        for j in (i + 1)..(target_sum - 2) {
-            for k in (j + 1)..(target_sum - 2) {
-                let candidate = i + j + k;
-                if candidate < target_sum {
-                    continue;
-                } else if candidate > target_sum {
-                    break;
-                }
-                if i.pow(2) + j.pow(2) == k.pow(2) {
-                    result = i * j * k;
-                }
+    for i in 1..=(target_sum / 2) {
+        for j in (i + 1)..=(target_sum / 2) {
+            let k = target_sum - (i + j);
+            if i.pow(2) + j.pow(2) == k.pow(2) {
+                result = i * j * k;
             }
         }
     }
