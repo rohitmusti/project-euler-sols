@@ -13,7 +13,8 @@ fn main() {
 
 fn all_primes(n: u64) -> Vec<u64> {
     let mut sol: Vec<u64> = Vec::new();
-    for i in 2..n {
+    sol.push(2);
+    for i in (3..n).step_by(2) {
         if is_prime(i) {
             sol.push(i);
         }
